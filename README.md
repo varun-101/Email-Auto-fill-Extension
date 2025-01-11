@@ -61,11 +61,11 @@ A Chrome extension that automatically detects and copies OTP (One-Time Password)
 1. Clone the repository:
 ```bash
 git clone https://github.com/your-repo/gmail-otp-auto-copy.git
-cd gmail-otp-auto-copy
 ```
 
 2. Install dependencies:
 ```bash
+cd cloud-function
 npm install
 ```
 
