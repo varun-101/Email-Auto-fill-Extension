@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Email Auto-fill Extension",
+  "version": "1.0",
+  "description": "Automatically fills email fields using Gmail authentication",
+  "permissions": [
+    "identity",
+    "storage",
+    "activeTab",
+    "scripting",
+    "identity.email",
+    "tabs",
+    "system.display",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://www.googleapis.com/gmail/v1/*",
+    "http://localhost:8080/*",
+    "https://*.ngrok.io/*"
+  ],
+  "externally_connectable": {
+    "matches": ["http://localhost:8080/*", "https://*.ngrok.io/*"]
+  },
+  "oauth2": {
+    "client_id": "%CLIENT_ID%",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+} 

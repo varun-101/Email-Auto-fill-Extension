@@ -1,0 +1,14 @@
+{
+  "name": "email-auto-fill-extension",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node build.js",
+    "start": "npm run build && web-ext run"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "web-ext": "^7.0.0"
+  }
+} 
